@@ -1,0 +1,102 @@
+---
+import { siteConfig } from '../config/siteconfig';
+import LogoDisplay from './LogoDisplay.astro';
+import MobileNav from './MobileNav';
+
+const navItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#intent', label: 'Workshop Goals' },
+  { href: '#structure', label: 'Workshop Structure' },
+  { href: '#why-us', label: 'Why Us' },
+  { href: '#participants', label: 'Testimonials' },
+  { href: '#hosts', label: 'Your Hosts' },
+];
+
+const { hostLogo } = siteConfig;
+---
+
+<nav 
+  id="navbar" 
+  class="fixed top-0 left-0 right-0 transform transition-transform duration-300 ease-in-out bg-white/80 backdrop-blur-sm z-50"
+>
+  <div class="flex items-center justify-between max-w-7xl mx-auto py-1 px-4">
+    <div class="h-[90px]">
+      <a href="#home" class="block h-full">
+        <LogoDisplay src={hostLogo} alt="Host Logo" class="h-full" />
+      </a>
+    </div>
+
+    <div class="hidden md:flex">
+      <ul class="flex space-x-8">
+        {navItems.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="md:hidden">
+      <MobileNav client:load navItems={navItems} />
+    </div>
+  </div>
+</nav>
+
+<script>
+  function initNavbar() {
+    const navbar = document.getElementById('navbar') as HTMLElement;
+    if (!navbar) {
+      console.warn('Navbar element not found');
+      return;
+    }
+
+    let lastScrollY = window.scrollY;
+    const scrollThreshold = 100;
+
+    function updateNavbar() {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar when at top
+      if (currentScrollY <= 0) {
+        navbar.style.transform = 'translateY(0)';
+        return;
+      }
+
+      // Show when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY) {
+        navbar.style.transform = 'translateY(0)';
+      } else {
+        navbar.style.transform = 'translateY(-100%)';
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    // Add scroll event listener with throttling
+    let ticking = false;
+    document.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateNavbar();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Set initial state
+    updateNavbar();
+  }
+
+  // Initialize when the DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+  } else {
+    initNavbar();
+  }
+</script> 

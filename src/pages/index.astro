@@ -1,11 +1,187 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../config/siteconfig';
+import LogoDisplay from '../components/LogoDisplay.astro';
+import AppleHelloEffect from '../components/ui/AppleHelloEffect';
+import SparklesText from '../components/ui/SparklesText';
+import TestimonialsCarousel from '../components/ui/TestimonialsCarousel';
+import CompanyMarquee from '../components/ui/CompanyMarquee';
+import ScrollStepIndicator from '../components/ui/ScrollStepIndicator';
+
+const { sections, hostLogo } = siteConfig;
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main class="relative">
+		<section id="home" class="snap-start min-h-screen flex items-center justify-center">
+			<div class="container mx-auto px-4 py-16">
+				<div class="max-w-4xl mx-auto text-center">
+					<SparklesText client:load text="Hello Turno" />
+					
+					<p class="mt-8 text-xl text-gray-600">
+						{sections.hello}
+					</p>
+
+					<div class="mt-12">
+						<a
+							href="#intent"
+							class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+						>
+							{sections.homeCta}
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="intent" class="snap-start min-h-screen flex items-center justify-center bg-gray-50">
+			<div class="container mx-auto px-4 py-16">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-8">{sections.intentTitle}</h1>
+					
+					<div class="prose prose-lg max-w-none">
+						<p class="text-xl text-gray-600 mb-8">
+							{sections.intent}
+						</p>
+
+						<div class="bg-white rounded-lg p-8 mt-12">
+							<h2 class="text-2xl font-semibold mb-4">{sections.keyObjectivesTitle}</h2>
+							<ul class="space-y-4">
+								{sections.objectives.map((objective) => (
+									<li class="flex items-start">
+										<svg class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+										</svg>
+										<span>{objective}</span>
+									</li>
+								))}
+							</ul>
+						</div>
+
+						<div class="mt-12">
+							<a
+								href="#structure"
+								class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+							>
+								{sections.keyObjectivesCta}
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="structure" class="snap-start min-h-screen flex items-center justify-center">
+			<div class="container mx-auto px-4 py-16">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-8">{sections.structureTitle}</h1>
+
+					<div class="grid gap-8 md:grid-cols-2">
+						{sections.structure.map((day) => (
+							<div class="bg-white rounded-lg shadow-sm border p-6">
+								<h2 class="text-2xl font-semibold mb-4">{day.day}</h2>
+								<ul class="space-y-3">
+									{day.activities.map((activity) => (
+										<li class="flex items-start">
+											<svg
+												class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke="currentColor"
+											>
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													stroke-width="2"
+													d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+												/>
+											</svg>
+											<span class="text-gray-700">{activity}</span>
+										</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</div>
+
+					<div class="mt-12 text-center">
+						<a
+							href="#why-us"
+							class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+						>
+							{sections.structureCta}
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="why-us" class="snap-start min-h-screen flex items-center justify-center bg-gray-50">
+			<div class="container mx-auto px-4 py-16 pt-24 md:pt-28">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-12 text-center">{sections.whyUsTitle}</h1>
+
+					<div class="grid gap-8 md:grid-cols-3">
+						{sections.whyUsMetrics.map((metric) => (
+							<div class="bg-white rounded-lg p-4 md:p-8 shadow-sm text-center">
+								<div class="mx-auto w-10 h-10 md:w-16 md:h-16 mb-4 md:mb-6 text-blue-600" set:html={metric.icon} />
+								<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">{metric.title}</h3>
+								<p class="text-gray-600">{metric.description}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="participants" class="snap-start min-h-screen flex flex-col items-center justify-center bg-gray-50">
+			<div class="container mx-auto px-4 py-16">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-12 text-center">{sections.participantsTitle}</h1>
+					<TestimonialsCarousel client:load verbatims={sections.participants} />
+					<div class="mt-16">
+						<h2 class="text-xl font-semibold mb-4 text-center">Attended by Employees from</h2>
+						<CompanyMarquee client:load companies={sections.attendeeCompanies} />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="hosts" class="snap-start min-h-screen flex items-center justify-center pt-24 md:pt-28">
+			<div class="container mx-auto px-4 py-16">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="text-4xl font-bold mb-12 text-center">{sections.hostsTitle}</h1>
+
+					<div class="grid gap-8 md:grid-cols-2">
+						{sections.hosts.map((host) => (
+							<div class="bg-white rounded-lg p-4 md:p-8 shadow-sm text-center">
+								<div class="w-20 h-20 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 rounded-full bg-gray-200 overflow-hidden">
+									<img
+										src={host.image}
+										alt={host.name}
+										class="w-full h-full object-cover"
+									/>
+								</div>
+								<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">{host.name}</h3>
+								<p class="text-gray-600 mb-2 md:mb-4">{host.role}</p>
+								<p class="text-gray-600">{host.bio}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-gray-50 py-8">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center text-gray-600">
+					<p>&copy; {new Date().getFullYear()} {sections.footerText}</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<ScrollStepIndicator client:load />
 </Layout>

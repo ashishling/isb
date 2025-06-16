@@ -1,0 +1,59 @@
+---
+import { siteConfig } from '../config/siteconfig';
+
+const { contact, social } = siteConfig;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div>
+    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+    <ul class="space-y-2">
+      <li>
+        <a
+          href={`mailto:${contact.email}`}
+          class="text-gray-600 hover:text-gray-900"
+        >
+          {contact.email}
+        </a>
+      </li>
+      <li>
+        <a
+          href={`tel:${contact.phone}`}
+          class="text-gray-600 hover:text-gray-900"
+        >
+          {contact.phone}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+    <ul class="space-y-2">
+      <li>
+        <a
+          href={social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-600 hover:text-gray-900"
+        >
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a
+          href={social.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-600 hover:text-gray-900"
+        >
+          Twitter
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-8 text-center text-sm text-gray-500">
+  <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+</div> 

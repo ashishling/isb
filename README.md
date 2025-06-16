@@ -1,4 +1,72 @@
-# Astro Starter Kit: Basics
+# Modular AI Workshop Proposal Microsite
+
+A reusable, visually minimal, and modern Astro-based microsite for pitching AI workshops. Each instance of the site presents a tailored proposal with modular content via a config file.
+
+## Features
+
+- 🚀 Built with Astro for ultra-fast performance
+- 🎨 Clean, modern Apple-style aesthetic
+- 📱 Fully responsive design
+- ⚡ Minimal JavaScript usage
+- 🔧 Easy configuration via `siteconfig.ts`
+- 🔒 Optional Netlify password protection
+
+## Quick Start
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Update the configuration:
+Edit `src/config/siteconfig.ts` with your workshop details.
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Build for production:
+```bash
+npm run build
+```
+
+## Customization
+
+### Site Configuration
+
+Update `src/config/siteconfig.ts` with your:
+- Workshop title
+- Client and host logos
+- Section content
+- Contact information
+- Social links
+
+### Styling
+
+- Uses TailwindCSS for styling
+- Inter font family by default
+- Easy to customize via Tailwind configuration
+
+### Deployment
+
+The site is configured for deployment on Netlify:
+
+1. Push to GitHub
+2. Connect to Netlify
+3. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+
+## License
+
+MIT
 
 ```sh
 npm create astro@latest -- --template basics
