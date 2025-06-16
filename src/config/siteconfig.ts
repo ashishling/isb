@@ -4,7 +4,7 @@ export const siteConfig = {
   sections: {
     hello: "Welcome to your AI Workshop Proposal microsite - also built with AI! We're excited to go on this journey with you!",
     homeCta: "Let's Begin",
-    intent: "Our goal is to help Turno leaders feel comfortable with using AI tools themselves to turn ideas into MVPs and feel inspired to leverage AI to solve business problems previously limited by engineering bandwidth.",
+    intent: "Help Turno leaders feel comfortable with using AI tools themselves to turn ideas into MVPs and leverage AI to solve business problems previously limited by engineering bandwidth.",
     intentTitle: "Proposed Workshop Objective",
     keyObjectivesTitle: "Key Results",
     keyObjectivesCta: "View Workshop Structure",
@@ -24,19 +24,18 @@ export const siteConfig = {
       },
       {
         icon: "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z\"/></svg>",
-        title: "Very Strong NPS",
+        title: "Amazing NPS",
         description: "77% NPS amongst participants"
       }
     ],
     participantsTitle: "What Past Participants Said",
     hostsTitle: "Your Hosts",
-    footerText: "All rights reserved.",
     structure: [
       {
         day: "Day 1 - 4 hours",
         activities: [
           "Introduction to building with AI and Cursor",
-          "Project 1 - Building your first web application with Cursor - an AI calendar and to-do app",
+          "Project 1 - Building your first web application with Cursor - an AI calendar and to-do web-app",
           "Project 2 - Building mini-projects with multi-modal gen-AI tools like Elevenlabs, Imagen and Google Veo",
         ]
       },
@@ -50,7 +49,7 @@ export const siteConfig = {
     ],
     whyUs: "Our team brings together decades of experience in AI implementation and training, having worked with leading organizations across various industries.",
     participants: [
-      "Very proactive hosts / guides who were keen to make sure we understood well and were “successful”",
+      "Very proactive hosts / guides who were keen to make sure we understood well and were successful",
       "Structuring of the process, workshop style format, ready help",
       "The hands-on approach made complex concepts accessible.",
       "Simple first steps that challenges but did not intimidate, for a newbie",
@@ -85,15 +84,8 @@ export const siteConfig = {
     ],
     objectives: [
       "Leaders successfully build an MVP web-application on their own and understand core workflows they can replicate",
-      "Leaders build mini-projects using multi-modal AI tools across audio, image and video to give them inspiration on how AI tools can be leveraged in their workflows",
+      "Leaders build mini-projects using multi-modal AI tools across audio, image and video to see how they can be leveraged in their workflows",
     ]
   },
-  contact: {
-    email: "ashishling@example.com",
-    phone: "+1 (555) 123-4567"
-  },
-  social: {
-    linkedin: "https://linkedin.com/company/example",
-    twitter: "https://twitter.com/example"
-  }
+  
 }; 

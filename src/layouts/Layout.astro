@@ -2,7 +2,6 @@
 import { siteConfig } from '../config/siteconfig';
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
 
 interface Props {
 	title?: string;
@@ -37,12 +36,6 @@ const {
 			<main class="snap-y snap-mandatory h-screen overflow-y-scroll">
 				<slot />
 			</main>
-
-			<footer class="bg-gray-50 border-t">
-				<div class="container mx-auto px-4 py-8">
-					<Footer />
-				</div>
-			</footer>
 		</div>
 
 		<script>

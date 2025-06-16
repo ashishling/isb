@@ -17,10 +17,10 @@ const { hostLogo } = siteConfig;
 
 <nav 
   id="navbar" 
-  class="fixed top-0 left-0 right-0 transform transition-transform duration-300 ease-in-out bg-white/80 backdrop-blur-sm z-50"
+  class="fixed top-0 left-0 right-0 transform transition-transform duration-300 ease-in-out bg-transparent backdrop-blur-sm z-50"
 >
   <div class="flex items-center justify-between max-w-7xl mx-auto py-1 px-4">
-    <div class="h-[90px]">
+    <div class="h-[90px] md:h-[115px] transition-all duration-300">
       <a href="#home" class="block h-full">
         <LogoDisplay src={hostLogo} alt="Host Logo" class="h-full" />
       </a>
@@ -64,8 +64,14 @@ const { hostLogo } = siteConfig;
       // Show navbar when at top
       if (currentScrollY <= 0) {
         navbar.style.transform = 'translateY(0)';
+        navbar.classList.remove('bg-white/80');
+        navbar.classList.add('bg-transparent');
         return;
       }
+
+      // Add white background when scrolling
+      navbar.classList.remove('bg-transparent');
+      navbar.classList.add('bg-white/80');
 
       // Show when scrolling up, hide when scrolling down
       if (currentScrollY < lastScrollY) {
