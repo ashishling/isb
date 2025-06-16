@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: "AI Workshop Proposal for [ClientName]",
+  title: "AI Workshop Proposal for Turno",
   hostLogo: "/logos/host.png",
   sections: {
     hello: "Welcome to your AI Workshop Proposal microsite - also built with AI! We're excited to go on this journey with you!",
