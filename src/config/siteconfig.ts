@@ -36,7 +36,7 @@ export const siteConfig = {
         day: "Day 1 - 4 hours",
         activities: [
           "Introduction to building with AI and Cursor",
-          "Project 1 - Building your first web application with Cursor",
+          "Project 1 - Building your first web application with Cursor - an AI calendar and to-do app",
           "Project 2 - Building mini-projects with multi-modal gen-AI tools like Elevenlabs, Imagen and Google Veo",
         ]
       },
@@ -74,7 +74,7 @@ export const siteConfig = {
         name: "Ashish Lingamneni",
         role: "Co-host",
         image: "/images/host1.png",
-        bio: "Ashish has 13 years of experience across marketing and product marketing and now spends a lof of his time building with AI"
+        bio: "Ashish has 13 years of experience across marketing and product marketing and now spends much of his time building with AI"
       },
       {
         name: "Shraddha Gupta",
@@ -89,7 +89,7 @@ export const siteConfig = {
     ]
   },
   contact: {
-    email: "workshops@example.com",
+    email: "ashishling@example.com",
     phone: "+1 (555) 123-4567"
   },
   social: {
