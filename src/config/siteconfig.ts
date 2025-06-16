@@ -42,7 +42,6 @@ export const siteConfig = {
       {
         day: "Day 2 - To Be Discussed",
         activities: [
-          "Hackathon Launch",
           "Hackathon Presentations",
         ]
       }

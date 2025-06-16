@@ -23,8 +23,8 @@ const TestimonialsCarousel: React.FC<Props> = ({ verbatims }) => {
   return (
     <div className="relative w-full flex flex-col items-center">
       <div className="w-full max-w-xl mx-auto">
-        <div className="bg-white rounded-lg p-8 shadow-sm text-center min-h-[120px] flex items-center justify-center transition-all duration-500">
-          <p className="text-gray-700 text-lg italic">“{verbatims[index]}”</p>
+        <div className="bg-white rounded-lg p-8 shadow-sm text-center h-[200px] flex items-center justify-center transition-all duration-500 overflow-y-auto">
+          <p className="text-gray-700 text-lg italic">"{verbatims[index]}"</p>
         </div>
       </div>
       <div className="flex justify-center mt-4 space-x-4">
