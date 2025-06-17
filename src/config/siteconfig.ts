@@ -4,7 +4,7 @@ export const siteConfig = {
   sections: {
     hello: "Welcome to your AI Workshop Proposal microsite - also built with AI! We're excited to go on this journey with you!",
     homeCta: "Let's Begin",
-    intent: "Help Turno leaders feel comfortable with using AI tools themselves to turn ideas into MVPs and leverage AI to solve business problems previously limited by engineering bandwidth.",
+    intent: "Help Turno leaders turn ideas into MVPs using AI Coding tools and feel creatively inspired about the possibilities to leverage AI at work. ",
     intentTitle: "Proposed Workshop Objective",
     keyObjectivesTitle: "Key Results",
     keyObjectivesCta: "View Workshop Structure",
@@ -32,17 +32,17 @@ export const siteConfig = {
     hostsTitle: "Your Hosts",
     structure: [
       {
-        day: "Day 1 - 4 hours",
+        day: "Day 1 : 4 hours",
         activities: [
           "Introduction to building with AI and Cursor",
-          "Project 1 - Building your first web application with Cursor - an AI calendar and to-do web-app",
-          "Project 2 - Building mini-projects with multi-modal gen-AI tools like Elevenlabs, Imagen and Google Veo",
+          "Project 1 : Building your first web application with Cursor - an AI calendar and to-do web-app",
+          "Project 2 : Building mini-projects with multi-modal gen-AI tools like Elevenlabs, Imagen and Google Veo",
         ]
       },
       {
-        day: "Day 2 - To Be Discussed",
+        day: "Day 2 : To Be Discussed",
         activities: [
-          "Hackathon Presentations",
+          "Hackathon",
         ]
       }
     ],
@@ -72,18 +72,18 @@ export const siteConfig = {
         name: "Ashish Lingamneni",
         role: "Co-host",
         image: "/images/host1.png",
-        bio: "Ashish has 13 years of experience across marketing and product marketing and now spends much of his time building with AI"
+        bio: "Ashish has 13 years of experience across marketing and product marketing across Swiggy, Ola and J&J and now spends much of his time building with AI"
       },
       {
         name: "Shraddha Gupta",
         role: "Co-host",
         image: "/images/host2.png",
-        bio: "Shraddha is a product and business leader and AI Strategis at Hasura and loves seeing people's reactions the first time they build a product"
+        bio: "Shraddha is a product growth leader who spent the last half a decade at Hasura a developer tools SaaS company, where she was closely involved in AI product sales to companies like Swiggy."
       }
     ],
     objectives: [
-      "Leaders successfully build an MVP web-application on their own and understand core workflows they can replicate",
-      "Leaders build mini-projects using multi-modal AI tools across audio, image and video to see how they can be leveraged in their workflows",
+      "Leaders successfully build a personal MVP web-application and identify business pain points that could benefit from application of AI tools",
+      "Leaders build mini-projects using multi-modal AI tools across audio, image and video to get a flavour for the breadth of capabilities for these tools",
     ]
   },
   
