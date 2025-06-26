@@ -135,13 +135,13 @@ const { sections, hostLogo } = siteConfig;
 		<section id="structure" class="snap-start min-h-screen flex items-center justify-center pt-16 md:pt-24">
 			<div class="container mx-auto px-4 py-12 md:py-16">
 				<div class="max-w-4xl mx-auto">
-					<h1 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8">{sections.structureTitle}</h1>
+					<h1 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center">{sections.structureTitle}</h1>
 
-					<div class="grid gap-6 md:gap-8 md:grid-cols-2">
+					<div class="flex flex-wrap justify-center gap-6 md:gap-8">
 						{sections.structure.map((day) => (
-							<div class="bg-white rounded-lg shadow-sm border p-4 md:p-6">
+							<div class="bg-white rounded-lg shadow-sm border p-4 md:p-6 text-center">
 								<h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">{day.day}</h2>
-								<ul class="space-y-3">
+								<ul class="space-y-3 inline-block text-left">
 									{day.activities.map((activity) => (
 										<li class="flex items-start">
 											<svg

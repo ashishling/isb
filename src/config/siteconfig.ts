@@ -2,7 +2,7 @@ export const siteConfig = {
   title: "AI Workshop Proposal",
   hostLogo: "/logos/host.png",
   sections: {
-    hello: "Come build your first web application at the Build With AI workshop on 19th of July - a workshop designed for never-coders",
+    hello: "Come build your first web application at the Build With AI workshop on 19th of July - a hands-on in-person workshop to get you kickstarted on vibe-coding" ,
     homeCta: "Learn More",
     intent: "Introduce mid-senior leaders to building MVPs with AI Coding tools and feel creatively inspired about the possibilities to leverage AI at work. ",
     intentTitle: "Workshop Objective",
@@ -35,8 +35,8 @@ export const siteConfig = {
         day: "19th July 130PM-5PM",
         activities: [
           "Module 1 : Introduction to building with AI and Cursor",
-          "Module 2 : Building your first front-end web-app user experience",
-          "Module 3 : Basics of customizing and personalizing your prototype",
+          "Module 2 : Building your first MVP web-app user experience",
+          "Module 3 : Customizing and personalizing your web-app",
           "Module 3 : Integrating an LLM API into your web application",
         ]
       },
