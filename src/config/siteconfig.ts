@@ -37,7 +37,7 @@ export const siteConfig = {
           "Module 1 : Introduction to building with AI and Cursor",
           "Module 2 : Building your first MVP web-app user experience",
           "Module 3 : Customizing and personalizing your web-app",
-          "Module 3 : Integrating an LLM API into your web application",
+          "Module 4 : Integrating an LLM API into your web application",
         ]
       },
       
