@@ -32,7 +32,7 @@ export const siteConfig = {
     hostsTitle: "Your Hosts",
     structure: [
       {
-        day: "19th July 130PM-5PM",
+        day: "19th July 3 hour workshop",
         activities: [
           "Module 1 : Introduction to building with AI and Cursor",
           "Module 2 : Building your first MVP web-app user experience",

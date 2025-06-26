@@ -10,7 +10,6 @@ const navItems = [
   { href: '#why-us', label: 'Why Us' },
   { href: '#participants', label: 'Testimonials' },
   { href: '#hosts', label: 'Your Hosts' },
-  { href: 'https://lu.ma/6ovi5id6', label: 'Book Now', external: true },
 ];
 
 const { hostLogo } = siteConfig;
@@ -29,13 +28,11 @@ const { hostLogo } = siteConfig;
 
     <div class="hidden md:flex">
       <ul class="flex space-x-8">
-        {navItems.map(({ href, label, external }) => (
+        {navItems.map(({ href, label }) => (
           <li>
             <a
               href={href}
               class="text-gray-600 hover:text-gray-900 transition-colors"
-              target={external ? '_blank' : undefined}
-              rel={external ? 'noopener noreferrer' : undefined}
             >
               {label}
             </a>
