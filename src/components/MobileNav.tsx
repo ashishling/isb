@@ -4,6 +4,7 @@ import React from 'react';
 type NavItem = {
   href: string;
   label: string;
+  external?: boolean;
 };
 
 type Props = {
@@ -28,12 +29,14 @@ const MobileNav: React.FC<Props> = ({ navItems }) => {
             )}
           </Disclosure.Button>
           <Disclosure.Panel className="absolute top-full left-0 right-0 bg-white shadow-md z-50 flex flex-col items-center py-4 space-y-4 md:hidden">
-            {navItems.map(({ href, label }) => (
+            {navItems.map(({ href, label, external }) => (
               <a
                 key={href}
                 href={href}
                 className="block text-lg text-gray-700 hover:text-blue-600 font-medium px-4 py-2 rounded transition-colors"
-                onClick={() => close()}
+                onClick={() => !external && close()}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
               >
                 {label}
               </a>

@@ -19,18 +19,26 @@ const { sections, hostLogo } = siteConfig;
 		<section id="home" class="snap-start min-h-screen flex items-center justify-center">
 			<div class="container mx-auto px-4 py-12 md:py-16">
 				<div class="max-w-4xl mx-auto text-center">
-					<SparklesText client:load text="Hello Turno" />
+					<SparklesText client:load text="Hello Hyderabad" />
 					
 					<p class="mt-6 md:mt-8 text-xl text-gray-600">
 						{sections.hello}
 					</p>
 
-					<div class="mt-8 md:mt-12">
+					<div class="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
 						<a
-							href="#intent"
-							class="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg"
+							href="#situation-today"
+							class="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg w-full sm:w-auto"
 						>
 							{sections.homeCta}
+						</a>
+						<a
+							href="https://lu.ma/6ovi5id6"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:text-lg w-full sm:w-auto"
+						>
+							Book Now
 						</a>
 					</div>
 				</div>
