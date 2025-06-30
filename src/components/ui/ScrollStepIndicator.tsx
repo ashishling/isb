@@ -9,6 +9,7 @@ const SECTIONS = [
   { id: "why-us", label: "Why Us" },
   { id: "participants", label: "Testimonials" },
   { id: "hosts", label: "Hosts" },
+  { id: "book-now", label: "Book Now" },
 ];
 
 const ScrollStepIndicator: React.FC = () => {

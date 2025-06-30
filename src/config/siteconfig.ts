@@ -39,8 +39,7 @@ export const siteConfig = {
           "Module 3 : Customizing and personalizing your web-app",
           "Module 4 : Integrating an LLM API into your web application",
         ]
-      },
-      
+      }
     ],
     whyUs: "",
     participants: [
@@ -80,7 +79,22 @@ export const siteConfig = {
     objectives: [
       "Participants successfully build their first personal MVP web-application and identify the core workflows involved",
       "Participants implement key concepts including building front-end, API integration and debugging",
-    ]
+    ],
+    bookNowTitle: "Book Now",
+    bookNowCards: [
+      {
+        date: "19th July",
+        time: "10AM - 1PM",
+        location: "Gachibowli",
+        url: "https://lu.ma/vnvj9byc",
+      },
+      {
+        date: "19th July",
+        time: "2PM - 5PM",
+        location: "Gachibowli",
+        url: "https://lu.ma/6ovi5id6",
+      },
+    ],
   },
   
 }; 
